@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise ??</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  padding: 25px;
+  width: 90%;
+  max-width: 450px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.gift {
+  font-size: 110px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+button {
+  background: white;
+  color: #ff4081;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px;
+  box-shadow: 0 5px 15px #0003;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+#surprise {
+  display: none;
+  margin-top: 25px;
+  animation: fade 1.5s;
+}
+
+#surprise h2 {
+  font-size: 30px;
+  color: #fff700;
+  margin-bottom: 15px;
+}
+
+#surprise p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: scale(.5);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.heart {
+  position: absolute;
+  bottom: -30px;
+  animation: float 5s linear infinite;
+  font-size: 25px;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>?? A Special Surprise For You ??</h1>
+
+  <div class="gift" onclick="openGift()">??</div>
+
+  <p>Someone has a special gift for you! ??</p>
+
+  <button onclick="openGift()">Open Your Gift ??</button>
+
+  <div id="surprise">
+    <h2>?? Happy Birthday! ??</h2>
+    <p>
+      May your life be filled with happiness,
+      love and endless beautiful moments. ??
+      <br><br>
+      Keep Smiling, Keep Shining! ?
+      <br><br>
+      You are truly special! ??
+    </p>
+    <h1>????????</h1>
+  </div>
+
+</div>
+
+<script>
+function openGift() {
+  document.getElementById("surprise").style.display = "block";
+  document.querySelector(".gift").innerHTML = "??";
+
+  for(let i = 0; i < 40; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["??","??","??","?","??"][Math.floor(Math.random()*5)];
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (3+Math.random()*4)+"s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+  }
+}
+</script>
+
+</body>
+</html>
