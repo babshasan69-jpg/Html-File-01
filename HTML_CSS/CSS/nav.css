@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#Header {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+
+}
+
+#Paragraph {
+    width: 100%;
+    height: 80vh;
+    background-color: beige;
+}
+
+#Footer {   
+    width: 100%;
+    height: 10vh; 
+    background-color: blue;
+}
+#logo {
+    flex-shrink: 0%;
+}
+
+#logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+
+#Menu {
+    float: right;
+    display: flex;
+    margin-left: auto;
+}
+
+#Menu ul, li {
+    float: left;
+    list-style: none;
+    margin: 0px 10px;
+    
+}
+
+#Menu ul, li a{
+
+    text-decoration: none;
+    color: white;
+     transition: 0.3s;
+}
+
+#Menu ul li a:hover {
+    background-color: red;
+    color: aqua;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+#Menu ul{
+     list-style: none;
+
+    
+    display: flex;
+
+    
+    gap: 20px;
+}
